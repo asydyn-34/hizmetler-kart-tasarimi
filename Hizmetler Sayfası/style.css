@@ -1,0 +1,126 @@
+ body{
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+padding: 0;
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+box-sizing: border-box;
+
+}
+ 
+#baslik{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:rgba(255,255,255,0.3) ;
+    border-bottom: 2px solid #94bbe9;
+}
+
+#baslik h1{
+    color: #2c3e50;
+    font-size: 48px;
+}
+
+#baslik p{                   
+    color:#555555;
+    font-size: 32px;
+ }
+
+#kartlar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#kartlar :hover{
+    background-color: #94bbe9;
+    color: #fff;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      
+}
+
+.kart{
+    border: 2px solid;
+    min-height: 150px;
+    width: auto;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+
+.kart h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#2c3e50;
+    border-bottom: 3px solid;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.kart p{
+    font-size: 16px;
+    color: #2c3e50;
+    margin: 5px 0 10px 0;
+    
+}
+
+#footer {
+    background-color: rgba(255, 255, 255, 0.3); 
+    color: #2c3e50; 
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid #94bbe9; 
+    font-size: 24px;
+}
+
+#footer button{
+    background-color: #94bbe9;
+    height: 50px;
+    width: 200px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#footer button:hover {
+    background-color: #fff; 
+    color: #2c3e50;
+    transform: scale(1.05); 
+}
+
+@media(max-width:768px){
+    #kartlar{
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    #baslik h2{
+        font-size: 22px;
+    }
+
+    #baslik p{
+        font-size: 14px;
+    }
+}
+
+@media(max-width:480px) {
+    #kartlar{
+        grid-template-columns: 1fr;
+    }
+
+    #kartlar h2{
+        font-size: 18px;
+
+    }
+     #footer{
+        text-align: center;
+     }
+}
+
